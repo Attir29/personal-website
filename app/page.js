@@ -1,103 +1,88 @@
+"use client";
 import Image from "next/image";
 
+import { motion } from "framer-motion";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="bg-[#0a0a0a] md:px-24 overflow-hidden text-white">
+      <section className="flex flex-col items-center h-screen justify-center p-12 gap-8 lg:mt-12">
+        <div className="flex flex-col items-start justify-start w-full lg:text-[24px] md:text-[20px] text-[18px]">
+          <motion.h1 
+          initial={{
+            opacity: 0,
+            translateX: -70,
+            transition: { duration: 0.5 },
+          }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          whileInView={{ opacity: 1, translateX: 0 }}>I'M MIDZ</motion.h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <motion.div className="w-full flex justify-end items-center group"
+        initial={{
+            opacity: 0,
+            translateX: 200,
+            transition: { duration: 0.5 },
+          }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          whileInView={{ opacity: 1, translateX: 0 }}>
+          <img
+            src="/img-hero2.png"
+            alt=""
+            className="lg:min-w-[780px] md:w-[650px] min-w-[550px] translate-x-[220px] md:translate-x-[140px] lg:translate-x-0  transition-all duration-1000 ease-in-out animate-pulse"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+        </motion.div>
+        <motion.div className="w-full flex flex-col justify-between items-center text-[18px] sm:text-[20px] md:text-[24px] sm:flex-row"
+        initial={{
+            opacity: 0,
+            translateY: 50,
+            transition: { duration: 0.5 },
+          }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          whileInView={{ opacity: 1, translateY: 0 }}>
+          <p>LESS NOISES</p>
+          <p>MORE IMPACT</p>
+        </motion.div>
+      </section>
+
+
+      <section className="flex flex-col items-center h-screen justify-center p-12 gap-28">
+        <div className="flex flex-col items-start justify-start w-full lg:text-[24px] md:text-[20px] text-[18px] ">
+          <motion.h1
+          initial={{
+            opacity: 0,
+            translateX: -70,
+            transition: { duration: 0.5 },
+          }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          whileInView={{ opacity: 1, translateX: 0 }}>ABOUT ME</motion.h1>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-6 lg:flex-row md:justify-between w-full group">
+          <motion.img
+            src="/about-img.png"
+            alt=""
+            className="min-w-[280px] lg:max-w-[400px] group-hover:saturate-100 saturate-0 transition-all duration-300 ease-in-out"
+            initial={{
+              opacity: 0,
+              translateX: -100,
+              transition: { duration: 0.5 },
+            }}
+            whileInView={{ opacity: 1, translateX: 0 }}
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <motion.p className="text-justify lg:max-w-[745px] text-[16px] sm:text-[20px] md:text-[24px]"
+          initial={{
+            opacity: 0,
+            translateX: 70,
+            transition: { duration: 0.5 },
+          }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          whileInView={{ opacity: 1, translateX: 0 }}>
+            I'm a front-end developer skilled in JavaScript, React, and Next.js.
+            I design clean, intuitive UIs with Figma, and I’m confident in
+            public speaking, making collaboration smooth and effective. Let’s
+            create something great.
+          </motion.p>
+        </div>
+      </section>
+
+    </main>
   );
 }

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -22,5 +22,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-b612-mono), monospace;
+}
+
+
+.marker {
+text-decoration-line: underline;
+text-decoration-color: #000000;
+text-decoration-style: solid;
+text-decoration-thickness: 2px;
 }
