@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function WebPort() {
   return (
-    <section className="flex flex-col items-center h-fit justify-center p-12 gap-20 mt-32 md:px-28 text-white">
+    <section className="flex flex-col items-center h-fit justify-center p-12 gap-20 mt-32 md:px-28 text-white overflow-hidden">
       <motion.div className="flex flex-col items-start justify-start w-full lg:text-[24px] md:text-[20px] text-[18px] transition-all"
       initial={{
             opacity: 0,
