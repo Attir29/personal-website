@@ -7,13 +7,6 @@ export default function Footer() {
       <div className="flex flex-col justify-start items-start gap-12 md:gap-38 w-full">
         <div className="flex justify-start items-center gap-4 w-full">
           <img src="/logo.svg" alt="" className="w-24 h-auto" />
-          <a href="https://www.kodein.sch.id/">
-            <img
-              src="/logo-kodein.png"
-              alt=""
-              className="w-24 h-auto saturate-0 hover:saturate-100 transition-all duration-300"
-            />
-          </a>
         </div>
         <p className="hidden md:flex">
           © 2025 Attirmidzi. All rights reserved.
