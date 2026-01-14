@@ -37,7 +37,7 @@ export default function PubSpeak() {
               className="w-full h-[700px] object-cover object-center group-hover:saturate-100 saturate-0 transition-all duration-300 ease-in-out"
             />
             <div className="flex flex-col justify-center items-center gap-2 w-full h-full lg:h-[260px] lg:justify-between lg:items-start px-6 pb-6 lg:px-8 lg:pb-8">
-              <h2 className="text-[22px]  w-full flex justify-center items-center">
+              <h2 className="text-[22px] font-bold w-full flex justify-center items-center">
                 {pubSpeak.name}
               </h2>
               <p className="text-[18px] w-fit flex justify-center items-center text-justify ">
